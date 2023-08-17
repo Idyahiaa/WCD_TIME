@@ -94,32 +94,32 @@ const lon = position.coords.longitude;
     // Make the API call
     getIso();
   });
-   // Fonction pour exporter les isochrones au format GeoJSON
-   function exportGeoJSON(data) {
-    const geoJSONData = JSON.stringify(data);
-    const blob = new Blob([geoJSONData], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    // Crée un lien de téléchargement pour le fichier GeoJSON
-    const downloadLink = document.createElement('a');
-    downloadLink.href = url;
-    downloadLink.download = 'isochrones.geojson';
-    downloadLink.innerText = 'Télécharger GeoJSON';
+  //  // Fonction pour exporter les isochrones au format GeoJSON
+  //  function exportGeoJSON(data) {
+  //   const geoJSONData = JSON.stringify(data);
+  //   const blob = new Blob([geoJSONData], { type: 'application/json' });
+  //   const url = URL.createObjectURL(blob);
+  //   // Crée un lien de téléchargement pour le fichier GeoJSON
+  //   const downloadLink = document.createElement('a');
+  //   downloadLink.href = url;
+  //   downloadLink.download = 'isochrones.geojson';
+  //   downloadLink.innerText = 'Télécharger GeoJSON';
 
-    // Ajoute le lien de téléchargement à la page
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
+  //   // Ajoute le lien de téléchargement à la page
+  //   document.body.appendChild(downloadLink);
+  //   downloadLink.click();
 
-    // Clean up the link and URL object after the download
-    document.body.removeChild(downloadLink);
-    URL.revokeObjectURL(url);
-  }
+  //   // Clean up the link and URL object after the download
+  //   document.body.removeChild(downloadLink);
+  //   URL.revokeObjectURL(url);
+  // }
 
   // Associez la fonction d'exportation au bouton Export GeoJSON
-  const exportButton = document.getElementById('exportGeoJSON');
-  exportButton.addEventListener('click', () => {
-    exportGeoJSON(map.getSource('iso')._data);
+  // const exportButton = document.getElementById('exportGeoJSON');
+  // exportButton.addEventListener('click', () => {
+  //   exportGeoJSON(map.getSource('iso')._data);
     
-  });
+  // });
   });}
   else {
 
