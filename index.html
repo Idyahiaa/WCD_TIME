@@ -37,13 +37,16 @@
             <div class="toggle toggle--active-null toggle--null">Cycling</div>
           </label>
           <label class="toggle-container">
-            <input name="profile" type="radio" value="driving" />
-            <div class="toggle toggle--active-null toggle--null">Driving</div>
+            <input name="profile" type="radio" value="driving-traffic" />
+            <div class="toggle toggle--active-null toggle--null">Driving traffic</div>
           </label>
         </div>
         <h4 class="txt-m txt-bold mb6">Choose a maximum duration:</h4>
         <div class="mb12 mr12 toggle-group align-center">
-          <label class="toggle-container">
+
+          <input type = "range" min="0" max="60" name="duration" onchange="rangevalue.value=value" step="10"/>
+          <output id="rangevalue">10</output>Minutes
+          <!-- <label class="toggle-container">
             <input name="duration" type="radio" value="10" checked />
             <div class="toggle toggle--active-null toggle--null">10 min</div>
           </label>
@@ -54,7 +57,7 @@
           <label class="toggle-container">
             <input name="duration" type="radio" value="30" />
             <div class="toggle toggle--active-null toggle--null">30 min</div>
-          </label>
+          </label> -->
         </div>
       </form>
     </div>
